@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>kurs</title>
+        <style>
+            p{
+                width: 150px ;
+                text-align: center;
+            }
+            .input{
+                border-radius: 5px;
+                height: 25px;
+                border-color: green;
+            }
+            .input2{
+                background-color: green;
+            }
+            table{
+                background-color: rgba(82, 168, 236, 0.8) ;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <legend>Kurs Rupiah-Mata Uang Asing</legend>
+            <table Border="1">
+               <tr>
+                <th>Masukan Nilai</th>
+                <th>Valas</th>
+                <th>Rupiah</th>
+               </tr>
+               <tr>
+                   <td>
+                      <form name="form1" id="form1" class="form-control" onsubmit="return false">
+                          <input type="text" name="data" id="data" class="input" />
+                          
+                      </form>
+                   </td>
+                   <td>
+                       <form name="form2" id="form2" class="form-control" onsubmit="return false">
+                           <select name="kategori" id="kategori" class="form-control">
+                               <option value="1">US Dollar</option>
+                               <option value="2">Dollar Singapura</option>
+                               <option value="3">Ringgit Malaysia</option>
+                               <option value="4">Yen Jepang</option>
+                               <option value="5">Euro</option>
+                               <option value="6">Riyal Arab Saudi</option>
+                           </select>
+                           
+                       </form>
+                   </td>
+                   <td>
+                       <p id="tampil"><input type="hidden" name="" id="input" value="" /></p>
+               </tr>
+            </table>
+            <br />
+             <input type="button" onclick="hitung()" value="hitung" class="input2" />
+        </fieldset>
+        <script type="text/javascript" charset="utf-8">
+            function hitung()
+            {
+                let valas = document.getElementById("form2").kategori.value;
+                let masukan = parseFloat(data.value);
+                
+                if (valas =="1")
+                {
+                let hasil = masukan * 9.915;
+                document.getElementById("tampil").innerHTML =hasil;
+                }else if (valas =="2")
+                {
+                let hasil = masukan * 13.472;
+                document.getElementById("tampil").innerHTML =hasil;
+                }else if (valas =="3")
+                {
+                let hasil = masukan * 874;
+                document.getElementById("tampil").innerHTML =hasil;
+                }else if (valas =="4")
+                {
+                let hasil = masukan * 120;
+                document.getElementById("tampil").innerHTML =hasil;
+                }else if (valas =="5")
+                {
+                let hasil = masukan * 15.188;
+                document.getElementById("tampil").innerHTML =hasil;
+                }else if (valas =="6")
+                {
+                let hasil = masukan * 3.952;
+                document.getElementById("tampil").innerHTML =hasil;
+                }
+            }
+        </script>
+    </body>
+</html>
